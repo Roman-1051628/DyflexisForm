@@ -1,0 +1,895 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --secondary: #215EAC;
+  --error: #e7195a;
+}
+
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+header {
+  background: #fff;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* Landing Page  */
+
+.landingButtons{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.landingTitle{
+  font-size: 50px;
+  margin: 0;
+}
+
+.subTitle{
+  font-size: 35px;
+  margin: 0;
+}
+
+.LandingButton{
+  font-size: 40px;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid;
+  cursor: pointer;
+}
+.one{
+  border-color: #489e20;
+  color: #489e20;
+}
+.two{
+  border-color: #357f66;
+  color: #357f66;
+}
+.three{
+  border-color: #2361a5;
+  color: #2361a5;
+}
+.LandingButton:hover{
+  scale: 102%;
+  box-shadow: inset 0px 0px 10px black;
+}
+
+
+/* Edit Survey Page  */
+.surveyTable{
+  width: 85vw;
+  border-spacing: 20px;
+  margin-left: 0px;
+  padding: 0px;
+  width: 85vw;
+
+}
+
+.linkField{
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.linkField > input{
+  padding: 20px;
+  font-size: 15px;
+}
+
+.vragenTable{
+  width: 85vw;
+  border-spacing: 20px;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+.tableData{
+  padding-left: 20px;
+}
+
+.tableItem{
+  outline: thin solid;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: white;
+  margin-top: 20px;
+  flex-shrink: 1;
+}
+
+.deleteButton{
+  color: rgb(17, 87, 180);
+  font-size: large;
+  border-color: rgb(17, 87, 180);
+  border: solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+
+.editButton{
+  color: rgb(35, 222, 35);
+  font-size: large;
+  border-color: rgb(35, 222, 35);
+  border: solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.newButton{
+  width: auto;
+  font-size: large;
+  padding: 10px;
+  color: green;
+  border-color: green;
+  border: solid;
+  border-radius: 3px;
+  margin-left: 20px;
+}
+
+
+.backButton{
+  background: #fff;
+  color: rgb(17, 87, 180);
+  border: 2px solid rgb(17, 87, 180);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.buttonfield{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonfield > .deleteButton{
+  margin-left: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.buttonfield > .editButton{
+  width: fit-content;
+  height: fit-content;
+}
+
+.commitButton{
+  width: auto;
+  font-size: large;
+  padding: 10px;
+  border: solid;
+  border-color: #1aac83;
+  color: #1aac83;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+.nameInput{
+  font-size: large;
+  border: 1px solid;
+}
+
+/* New Survey page */
+.nameField{
+  display: flex;
+}
+
+.nameField > input{
+  margin-left: 10px;
+}
+
+.errorMessage{
+  color: Red;
+}
+
+.addCheckbox{
+  margin-right: 20px;
+  width: 25px;
+  height: 25px;
+}
+
+.anonymousCheck{
+  display: flex;
+  margin-top: 20px;
+  border: 1px solid;
+  border-color: black;
+  border-radius: 5px;
+  background-color: #1aac83;
+  align-items: center;
+}
+
+
+.anonymousCheck > label{
+  font-size: 22px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.anonymousCheck > input{
+  padding: 5px;
+  height: 25px;
+  margin-left: 54vw;
+}
+
+.checkItem{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-items: start;
+  align-items: center;
+  gap: 5px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+.checkItem p{
+  margin: 0;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  width: 100%;
+}
+.checkItem input{
+  margin-left: auto;
+}
+
+.checkItem > .buttonfield{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.surrounder{
+  display: flex;
+  align-items: center;
+}
+
+.surrounder > .tableData{
+  width: 75vw;
+}
+
+.questionField{
+  outline: thin solid;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: white;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.questionField > .tableData{
+  width: 65vw;
+}
+
+.questionField > .buttonfield{
+  width: 10vw;
+} 
+
+/* Edit Questions page*/
+
+.cancelButton{
+  color: rgb(17, 87, 180);
+  font-size: large;
+  border-color: rgb(17, 87, 180);
+  border: solid;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.submitButton{
+  color: rgb(35, 222, 35);
+  font-size: large;
+  border-color: rgb(35, 222, 35);
+  border: solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.choice{
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  color: white;
+}
+
+.choice > input{
+  margin-left: 10px;
+  box-shadow: 0px 0px 5px black;
+}
+
+/* new workout form */
+label, input {
+  display: block;
+}
+
+.user-survey input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.signup input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  width: -webkit-fill-available;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a, nav button {
+  margin-left: 10px;
+}
+
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* auth forms */
+form.signup, form.login {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.logo {
+  width: 300px;
+  height: auto;
+  margin-right:30px;
+}
+
+.link {
+  text-align: center;
+}
+
+form.signup h3, form.login h3 {
+  text-align: center;
+}
+
+.questionDiv{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
+.questionDisplay{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.questionForm{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  border-radius: 5px;
+  font-family: "Poppins";
+  border: black solid 1px;
+  background: rgb(73,160,29);
+  background: linear-gradient(106deg, rgba(73,160,29,1) 0%, rgba(33,94,172,1) 100%);
+  color: white;
+  text-shadow: 0px 0px 4px black;
+  align-items: center;
+}
+.forminput{
+  width: 80%;
+  border: 1px solid black;
+  box-shadow: 0px 0px 3px black;
+}
+.questionForm label{
+  width: max-content;
+}
+
+.addButton{
+  background: #fff;
+  color: rgb(35, 222, 35);
+  border: 2px solid rgb(35, 222, 35);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.questionForm input:hover{
+  box-shadow: inset black 0px 0px 5px;
+}
+
+.questionForm button:hover{
+  scale: 110%;
+  box-shadow: inset black 0px 0px 5px;
+}
+
+.questions{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+.question p{
+  background-color: green;
+}
+.questions input:hover{
+  box-shadow: inset black 0px 0px 5px;
+  height: 100%;
+}
+
+.editButton{
+  display: flex;
+  padding: 7px;
+  width: 100px;
+  background: #fff;
+  color: rgb(35, 222, 35);
+  border: 2px solid rgb(35, 222, 35);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.editButton:hover{
+  scale: 105%;
+  box-shadow: inset black 0px 0px 5px;
+}
+
+.deleteButton{
+  padding: 7px;
+  width: 100px;
+  background: #fff;
+  color: rgb(17, 87, 180);
+  border: 2px solid rgb(17, 87, 180);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.deleteButton:hover{
+  scale: 105%;
+  box-shadow: inset black 0px 0px 5px;
+}
+
+.questionForm label{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.checkbox{
+  width: fit-content;
+}
+
+.multiChoice{
+  display: flex;
+  gap: 5px;
+}
+
+.multiChoice p{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  
+}
+.multiquestion{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.multiquestion p{
+  margin: 0;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+/* styling for usersurvey, radio buttons and text area */
+
+.user-survey {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.user-survey-answer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.user-survey-answer input {
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+}
+
+.user-survey-answer label{
+  display: block;
+}
+
+button.btn-disabled {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 10px;
+  align-items: center;
+  opacity: 0.5;
+}
+
+button.btn-disabled-submit {
+  background: var(--secondary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 10px;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.user-survey-start-button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+button.btn {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+button.btn-submit {
+  background: var(--secondary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100px;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: end;
+}
+
+.user-survey-submit {
+  background: var(--secondary);
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+}
+
+footer .survey-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.survey-bar__text {
+  margin-left: 40px;
+}
+
+.footer-survey-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.question_progress {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.survey-buttons {
+  margin-right: 20px;
+}
+
+.formButtonHolder{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.cancelButton2{
+  background: #fff;
+  color: rgb(222, 35, 35);
+  border: 2px solid rgb(222, 35, 35);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+.madeBy{
+  padding: 0;
+  margin: 0;
+}
+.AddSurvey{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.homeQuestions{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 10px 20px 10px 20px;
+  gap: 5px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+.homeButton{
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.stylingDiv{
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.stylingDiv p{
+  margin: 0;
+}
+
+.copyButton{
+  background: #ffffff;
+  color: rgb(46, 46, 47);
+  border: 2px solid rgb(46, 46, 47);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  margin-left: auto;
+}
+.copyButton:hover{
+  scale: 110%;
+  box-shadow: inset 0px 0px 5px black;
+}
+
+.answerContainer{
+  background-color: #eaeaea;
+  padding: 15px;
+  border-radius: 4px;
+}
+.answerContainer p, ol{
+  margin: 0;
+}
+
+.naamText{
+  font-family: "Poppins";
+}
+.answerPageText{
+  margin: 0;
+}
+.welcomePageText{
+  margin: 0;
+  font-size: 30px;
+}
+.answers{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.answerUpperContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.csvButton{
+  background: #fff;
+  color: rgb(35, 222, 35);
+  border: 2px solid rgb(35, 222, 35);
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  text-shadow: none;
+  font-size: auto;
+  text-decoration: none;
+}
+.csvButton:hover{
+  scale: 110%;
+  box-shadow: inset black 0px 0px 5px;
+}
+.multipleChoice{
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
