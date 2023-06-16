@@ -25,7 +25,7 @@ const AddSurvey = () => {
 
     //Get all questions from the database
     useEffect(() => {
-        const url = "http://localhost:3000/survey/getAllQuestions"
+        const url = "https://dyflexisquestionaire.onrender.com/survey/getAllQuestions"
         axios.get(url).then((response) => {
             setAllQuestions(response.data);
         })
@@ -66,26 +66,26 @@ const AddSurvey = () => {
             alert("Vraag bestaat al!")
         } else {
             if(checked){
-                axios.post("http://localhost:3000/questions/createquestion", 
+                axios.post("https://dyflexisquestionaire.onrender.com/questions/createquestion", 
                 
                 {question: question, multipleChoice: checked, choices: [choicesA, choicesB, choicesC, choicesD]}
                 
                 )
                 .then(() => {
-                    axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+                    axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
                     console.log(response.data);
                     window.location.reload(false);
                     setListOfQuestions(response.data);
                 })
                 });
             } else{
-            axios.post("http://localhost:3000/questions/createquestion", 
+            axios.post("https://dyflexisquestionaire.onrender.com/questions/createquestion", 
             {
             question
             }
             )
             .then(() => {
-                axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+                axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
                 console.log(response.data);
                 window.location.reload(false);
 
@@ -124,7 +124,7 @@ const AddSurvey = () => {
         //Push survey to database if values are filled in
         if (nameInput != "" && creatorID != undefined) {
             const newSurvey = {name: nameInput, creator_id: creatorID, questions: questionList, anonymous: isAnonymous};
-            const url = "http://localhost:3000/survey/createSurvey"
+            const url = "https://dyflexisquestionaire.onrender.com/survey/createSurvey"
             axios.post(url, newSurvey)
         } else {
             alert("Vul alle velden in!")
