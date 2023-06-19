@@ -8,14 +8,14 @@ function GetUsers() {
     const [password] = useState("hoi");
 
     useEffect(() => {
-        axios.get("http://localhost:3000/home/getUsers").then((response) => {
+        axios.get("https://dyflexisquestionaire.onrender.com/home/getUsers").then((response) => {
             console.log(response.data);
             setListOfUsers(response.data);
         })
         }, []);
         
     const createuser = () => {
-        axios.post("http://localhost:3000/home/newUser", {
+        axios.post("https://dyflexisquestionaire.onrender.com/home/newUser", {
             name,
             email,
             password

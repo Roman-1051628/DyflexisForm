@@ -17,7 +17,7 @@ const SurveyEdit = () => {
     //Gets all questions in the survey on load
     useEffect(() => {
         const surID = param.id;
-        axios.get("http://localhost:3000/survey/getQuestions/" + surID).then((response) => {
+        axios.get("https://dyflexisquestionaire.onrender.com/survey/getQuestions/" + surID).then((response) => {
             setSurveyQuestions(response.data);
         })
     }, []);
@@ -25,7 +25,7 @@ const SurveyEdit = () => {
     //Get surveys information
     useEffect(() => {
         const surID = param.id;
-        const url = "http://localhost:3000/survey/" + surID
+        const url = "https://dyflexisquestionaire.onrender.com/survey/" + surID
         axios.get(url).then((response) => {
             setSurvey(response.data);
         })
@@ -33,11 +33,11 @@ const SurveyEdit = () => {
     
     //Get all questions that are not in the survey
     useEffect(() => {
-        const url = "http://localhost:3000/survey/getAllQuestions"
+        const url = "https://dyflexisquestionaire.onrender.com/survey/getAllQuestions"
         axios.get(url).then((response) => {
             let allquestions = response.data
             const surID = param.id;
-            axios.get("http://localhost:3000/survey/getQuestions/" + surID).then((response) => {
+            axios.get("https://dyflexisquestionaire.onrender.com/survey/getQuestions/" + surID).then((response) => {
                 let ids = []
                 let surquestions = response.data
                 for (let i = 0; i < surquestions.length; i++) {

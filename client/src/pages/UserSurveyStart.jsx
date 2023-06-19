@@ -22,14 +22,14 @@ const UserSurveyStart = () => {
 
     //this will get the survey name from the survey id located in the url and set it to the surveyname variable
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/surveyname/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/surveyname/${id}`)
             .then(res => setSurveyName(res.data))
             .catch(err => console.log(err));
     }, [id]);
 
     //this will check if the user has already answered the survey, if not it will create a new entry in the useranswers table
     const Checkifanswered = () => {
-        axios.get(`http://localhost:3000/survey/checkifanswered/${id}/${UserId}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/checkifanswered/${id}/${UserId}`)
             .then(res => {
                 if(res.data === true)
                 {
@@ -37,7 +37,7 @@ const UserSurveyStart = () => {
                 }
                 else
                 {
-                    axios.post(`http://localhost:3000/survey/postemptyanswer/${id}/${UserId}`)
+                    axios.post(`https://dyflexisquestionaire.onrender.com/survey/postemptyanswer/${id}/${UserId}`)
                         .then(res => {
                             window.location.href = `/survey/${id}/0`;
                         }

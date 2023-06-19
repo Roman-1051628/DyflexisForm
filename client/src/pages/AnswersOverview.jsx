@@ -15,11 +15,11 @@ function QuestionOverview() {
     const [Headers, setHeaders] = useState(["Naam"])
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/answers/getanswers/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/answers/getanswers/${id}`)
         .then(res => {
             setAnswers(res.data);
             res.data[0].questions.map((id) => {
-                axios.get(`http://localhost:3000/questions/getquestion/${id}`) 
+                axios.get(`https://dyflexisquestionaire.onrender.com/questions/getquestion/${id}`) 
                 .then(res => {setHeaders(Headers => [...Headers, res.data.question])})
                 .catch(err => console.log(err))
             })
@@ -30,7 +30,7 @@ function QuestionOverview() {
 
     //get survey name
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/surveyname/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/surveyname/${id}`)
         .then(res => {
             setSurveyName(res.data);
         }
@@ -40,7 +40,7 @@ function QuestionOverview() {
 
     //get survey anonymous
     useEffect(() => {
-        axios.get(`http://localhost:3000/answers/anonymous/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/answers/anonymous/${id}`)
         .then(res => {
             setAnonymous(res.data);
         }
@@ -50,7 +50,7 @@ function QuestionOverview() {
 
     //get answer amount for a survey
     useEffect(() => {
-        axios.get(`http://localhost:3000/answers/length/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/answers/length/${id}`)
         .then(res => {
             setLength(res.data);
         }

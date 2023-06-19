@@ -12,7 +12,7 @@ const AdminHome = () => {
 
     // Get all surveys from the database
     useEffect(() => {
-        axios.get("http://localhost:3000/survey/getSurveys").then((response) => {
+        axios.get("https://dyflexisquestionaire.onrender.com/survey/getSurveys").then((response) => {
             setSurveys(response.data);
         })
     }, []);
@@ -20,7 +20,7 @@ const AdminHome = () => {
     // Delete a single survey
     const deleteSurvey = event => {
         let id = event.currentTarget.id
-        axios.delete("http://localhost:3000/survey/deleteSurvey/" + id)
+        axios.delete("https://dyflexisquestionaire.onrender.com/survey/deleteSurvey/" + id)
         window.location.reload(false);
     }
 
@@ -65,7 +65,7 @@ const AdminHome = () => {
                                         <p>Maker: {survey.creator_id}</p>
                                         <p>Aantal vragen: {survey.questions.length}</p>
                                     </div>
-                                    <CopyToClipboard text={`http://localhost:4000/survey/${survey._id}`}>
+                                    <CopyToClipboard text={`https://dyflexis.onrender.com/survey/${survey._id}`}>
                                         <button onClick={Alertcopied} className="copyButton">Kopieer link</button>
                                     </CopyToClipboard>
                                 </div>

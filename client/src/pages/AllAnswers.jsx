@@ -13,10 +13,10 @@ const AllQuestions = () => {
 
     // get all surveys 
     useEffect(() => {
-        axios.get("http://localhost:3000/survey/getSurveys").then(async (response) => {
+        axios.get("https://dyflexisquestionaire.onrender.com/survey/getSurveys").then(async (response) => {
             let surveys = response.data
             for (let i = 0; i < surveys.length; i++) {
-                let promise = await axios.get(`http://localhost:3000/answers/Length/${surveys[i]._id}`).then((response) => response.data)
+                let promise = await axios.get(`https://dyflexisquestionaire.onrender.com/answers/Length/${surveys[i]._id}`).then((response) => response.data)
                 surveys[i] = {_id: surveys[i]._id, name: surveys[i].name, questions: surveys[i].questions, surLength: promise}
             }
             setSurveys(surveys);

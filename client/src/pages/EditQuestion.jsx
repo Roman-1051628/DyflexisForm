@@ -14,9 +14,9 @@ const EditQuestion = () => {
         const quesID_questions = param.id     //
         const quesID_survey = param.ques_id;
         if (urlCheck === "survey"){
-            var url = "http://localhost:3000/survey/getQuestionByID/" + quesID_survey;    
+            var url = "https://dyflexisquestionaire.onrender.com/survey/getQuestionByID/" + quesID_survey;    
         } else if (urlCheck === "questions"){
-            var url = "http://localhost:3000/survey/getQuestionByID/" + quesID_questions;
+            var url = "https://dyflexisquestionaire.onrender.com/survey/getQuestionByID/" + quesID_questions;
         }   
         axios.get(url).then((response) => {
             setQuestions(response.data);
@@ -52,9 +52,9 @@ const EditQuestion = () => {
         const quesID_questions = param.id     //
         const quesID_survey = param.ques_id;
         if (urlCheck === "survey"){
-            var url = "http://localhost:3000/survey/updateQuestion/" + quesID_survey;    
+            var url = "https://dyflexisquestionaire.onrender.com/survey/updateQuestion/" + quesID_survey;    
         } else if (urlCheck === "questions"){
-            var url = "http://localhost:3000/survey/updateQuestion/" + quesID_questions;
+            var url = "https://dyflexisquestionaire.onrender.com/survey/updateQuestion/" + quesID_questions;
         }
         axios.put(url, {name: question, options: options})
         if (urlCheck === "survey"){

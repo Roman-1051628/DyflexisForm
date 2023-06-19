@@ -15,7 +15,7 @@ const UserSurvey = () => {
     // this will get the users id from user located in the local storage
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("user"));
-        axios.get(`http://localhost:3000/survey/getanswers/${id}/${user.id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/getanswers/${id}/${user.id}`)
             .then((res) => {setAnswerArray(res.data)
         })
             .catch(err => console.log(err));
@@ -23,28 +23,28 @@ const UserSurvey = () => {
 
     //this will get the question by index located in the url
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/questions/${id}/${index}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/questions/${id}/${index}`)
             .then(res => setQuestion(res.data))
             .catch(err => console.log(err));	
     }, [id, index]);
 
     //this will check if the question is multiple choice
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/multipleChoice/${id}/${index}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/multipleChoice/${id}/${index}`)
             .then(res => setMultipleChoice(res.data))
             .catch(err => console.log(err));
     }, [id, index]);
 
     //this will get the possible answers for the multiple choice question
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/answers/${id}/${index}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/answers/${id}/${index}`)
             .then(res => setAnswers(res.data))
             .catch(err => console.log(err));
     }, [id, index]);
 
     //this will get the length of the questions array for a given survey
     useEffect(() => {
-        axios.get(`http://localhost:3000/survey/length/${id}`)
+        axios.get(`https://dyflexisquestionaire.onrender.com/survey/length/${id}`)
             .then(res => setLength(res.data))
             .catch(err => console.log(err));
     }, [id]);
@@ -56,12 +56,12 @@ const UserSurvey = () => {
 
     //this will handle the redirect to the previous question
     const handlePrevious = () => {
-        window.location.href = `http://localhost:4000/survey/${id}/${parseInt(index) - 1}`;
+        window.location.href = `https://dyflexis.onrender.com/survey/${id}/${parseInt(index) - 1}`;
     }
 
     //this will handle the redirect to de survey start page 
     const handleStart = () => {
-        window.location.href = `http://localhost:4000/survey/${id}`;
+        window.location.href = `https://dyflexis.onrender.com:4000/survey/${id}`;
     }
 
     //this will log the checked answer to the console and then post the answer to the database, it will make the checked answer an empty string if no answer is selected
@@ -74,8 +74,8 @@ const UserSurvey = () => {
         newArray[index] = checkedAnswer
         setAnswerArray(newArray)
         const user = JSON.parse(localStorage.getItem("user"));
-        axios.put(`http://localhost:3000/survey/updateanswer/${id}/${user.id}`, {answers: answerArray})
-        .then(window.location.href = `http://localhost:4000/survey/${id}/${parseInt(index) + 1}`)
+        axios.put(`https://dyflexisquestionaire.onrender.com/survey/updateanswer/${id}/${user.id}`, {answers: answerArray})
+        .then(window.location.href = `https://dyflexis.onrender.com/survey/${id}/${parseInt(index) + 1}`)
         .catch(err => console.log(err));
     }
 
@@ -89,8 +89,8 @@ const UserSurvey = () => {
         newArray[index] = checkedAnswer
         setAnswerArray(newArray)
         const user = JSON.parse(localStorage.getItem("user"));
-        axios.put(`http://localhost:3000/survey/updateanswer/${id}/${user.id}`, {answers: answerArray, completed: true})
-        .then(window.location.href = `http://localhost:4000/survey/${id}/end`)
+        axios.put(`https://dyflexisquestionaire.onrender.com/survey/updateanswer/${id}/${user.id}`, {answers: answerArray, completed: true})
+        .then(window.location.href = `https://dyflexis.onrender.com/survey/${id}/end`)
         .catch(err => console.log(err));
     }
 

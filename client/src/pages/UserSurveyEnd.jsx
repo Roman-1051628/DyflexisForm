@@ -2,7 +2,7 @@ import React from 'react'
 
     //this will handle the redirect to de survey start page 
     const handleHome = () => {
-        window.location.href = `http://localhost:4000/`;
+        window.location.href = `https://dyflexis.onrender.com/`;
     }
 
 const UserSurveyEnd = () => {

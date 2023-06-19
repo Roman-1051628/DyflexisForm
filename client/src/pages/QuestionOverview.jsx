@@ -19,7 +19,7 @@ function QuestionOverview() {
     // const [choicesD2, setchoicesD2] = useState("")
 
     useEffect(() => {
-        axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+        axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
                 
             setListOfQuestions(response.data);
         })
@@ -38,25 +38,25 @@ function QuestionOverview() {
             alert("Vraag bestaat al!")
         } else {
             if(checked){
-                axios.post("http://localhost:3000/questions/createquestion", 
+                axios.post("https://dyflexisquestionaire.onrender.com/questions/createquestion", 
                 
                 {question: question, multipleChoice: checked, choices: [choicesA, choicesB, choicesC, choicesD]}
                 
                 )
                 .then(() => {
-                    axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+                    axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
                     console.log(response.data);
                     setListOfQuestions(response.data);
                 })
                 });
             } else{
-            axios.post("http://localhost:3000/questions/createquestion", 
+            axios.post("https://dyflexisquestionaire.onrender.com/questions/createquestion", 
             {
             question
             }
             )
             .then(() => {
-                axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+                axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
                 console.log(response.data);
                 setListOfQuestions(response.data);
             })
@@ -66,9 +66,9 @@ function QuestionOverview() {
     }
 
     const deleteQuestion = (id) => {
-        axios.delete(`http://localhost:3000/questions/deletequestion/${id}`)
+        axios.delete(`https://dyflexisquestionaire.onrender.com/questions/deletequestion/${id}`)
         .then(() => {
-            axios.get("http://localhost:3000/questions/getquestions").then((response) => {
+            axios.get("https://dyflexisquestionaire.onrender.com/questions/getquestions").then((response) => {
             console.log(response.data);
             setListOfQuestions(response.data);
         })
